@@ -1,0 +1,15 @@
+{
+  "name": "week2.5",
+  "version": "1.0.0",
+  "description": "Bootcamp 2023_04 - Week 2.5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alejandro Cerezo",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  }
+}
