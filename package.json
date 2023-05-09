@@ -6,6 +6,7 @@
   "keywords": [],
   "author": "Alejandro Cerezo",
   "license": "ISC",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watchAll",
