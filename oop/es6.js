@@ -7,6 +7,8 @@ export class User {
     User.count++;
   }
 
+  name;
+  age;
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -28,6 +30,7 @@ user3.greetings();
 console.log(User.count);
 
 class Alumno extends User {
+  course;
   constructor(name, age, course) {
     super(name, age);
     this.course = course;
