@@ -1,15 +1,24 @@
-// ES2015 / ES6
+interface Named {
+  name: string;
+}
 
-export class User {
+interface WithID {
+  id: string;
+  getId: () => string;
+}
+
+export class User implements Named, WithID {
   static count = 0;
 
   static addCount() {
     User.count++;
   }
 
-  name;
-  age;
-  constructor(name, age) {
+  id: string;
+  name: string;
+  age: number;
+  constructor(name: string, age: number) {
+    this.id = '';
     this.name = name;
     this.age = age;
     User.addCount();
@@ -17,6 +26,10 @@ export class User {
 
   greetings() {
     console.log(`Hola, soy ${this.name}`);
+  }
+
+  getId() {
+    return this.id;
   }
 }
 
@@ -29,9 +42,9 @@ user3.greetings();
 
 console.log(User.count);
 
-class Alumno extends User {
-  course;
-  constructor(name, age, course) {
+export class Alumno extends User {
+  course: string;
+  constructor(name: string, age: number, course: string) {
     super(name, age);
     this.course = course;
   }
